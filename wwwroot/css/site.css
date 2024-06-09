@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.main-image {
+    width: 640px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    .thumbnails img {
+        margin: 5px;
+        width: 64px;
+        height: 48px;
+        cursor: pointer;
+        object-fit: cover;
+    }
+
+.description {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}

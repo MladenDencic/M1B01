@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ImageCarousel</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <p id="main-description" class="description">@Model.Images[0].Description</p>
+        <img id="main-image" src="@Model.Images[0].Path" alt="@Model.Images[0].Description" class="main-image">
+        <div class="thumbnails">
+            @for (int i = 0; i < Model.Images.Count; i++)
+            {
+                <img src="@Model.Images[i].Path" alt="@Model.Images[i].Description" data-description="@Model.Images[i].Description" onclick="changeImage(this)">
+            }
+        </div>
+    </div>
+</body>
+</html>
